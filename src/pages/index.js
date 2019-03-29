@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Intro from '../components/Intro';
 import Content from '../components/Content';
+import Footer from '../components/Footer';
 
 class Home extends Component {
     constructor() {
@@ -20,9 +21,7 @@ class Home extends Component {
             <div>
                 <Intro />
                 <Content currentContent={this.state.content} />
-                <div id="footer">
-                    buttons
-                </div>
+                <Footer />
             </div>
         );
     }
