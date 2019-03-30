@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-    background: #707070;
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
     font-size: 54px;
