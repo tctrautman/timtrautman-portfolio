@@ -6,9 +6,11 @@ const TextContainer = styled.div`
     align-content: center;
     line-height: 21px;
     padding: 13px;
+    min-height: 400px;
 
     p {
-        padding: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     li {
