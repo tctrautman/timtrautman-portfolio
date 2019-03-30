@@ -2,10 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const TextContainer = styled.div`
-    max-width: 550px;
     text-align: left;
     align-content: center;
-    margin: 0 auto;
     line-height: 21px;
     padding: 13px;
 
