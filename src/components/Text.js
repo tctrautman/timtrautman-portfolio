@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const TextContainer = styled.div`
     max-width: 550px;
-    text-align: center;
+    text-align: left;
     align-content: center;
     margin: 0 auto;
     line-height: 21px;
