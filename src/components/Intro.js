@@ -10,13 +10,12 @@ const Container = styled.div`
     text-align: center;
     height: 100%;
     padding: 0px;
-    margin: 20px;
-    padding: 20px;
 
     img {
         border-radius: 50%;
         max-height: 250px;
-        max-height: 250px
+        max-height: 250px;
+        margin-top: 50px;
     }
 `;
 
