@@ -3,9 +3,27 @@ import Intro from '../components/Intro';
 import Content from '../components/Content';
 import Footer from '../components/Footer';
 import styled from 'styled-components';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
+
+const theme = {
+    fontFamily: 'Roboto',
+    background: '#707070'
+}
+
+const GlobalContainer = createGlobalStyle`
+    html {
+        background: #707070;
+        height: 100%;
+        width: 100%;
+    }
+
+    body {
+        height: 100%;
+        width: 100%;
+    }
+`;
 
 const Container = styled.div`
-    background: #707070;
     font-family: 'Roboto', sans-serif;
     font-weight: 200;
     color: #FFDA9D;
@@ -31,14 +49,19 @@ class Home extends Component {
 
     render() {
         return (
-            <Container>
-                <Intro />
-                <Content currentContent={this.state.content} />
-                <Footer
-                    setHome={this._setHome}
-                    setPortfolio={this._setPortfolio}
-                />
-            </Container>
+            <ThemeProvider theme={theme}>
+                <React.Fragment>
+                    <GlobalContainer />
+                    <Container>
+                        <Intro />
+                        <Content currentContent={this.state.content} />
+                        <Footer
+                            setHome={this._setHome}
+                            setPortfolio={this._setPortfolio}
+                        />
+                    </Container>
+                </React.Fragment>
+            </ThemeProvider>
         );
     }
 }
