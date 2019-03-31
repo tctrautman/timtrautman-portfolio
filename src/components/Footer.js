@@ -2,10 +2,10 @@ import React from 'react';
 import { FaHome, FaPaintBrush, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { GoMarkGithub } from 'react-icons/go';
 import styled from 'styled-components';
-import Button from './Button';
+import Button from './FooterButton';
 
 const FooterContainer = styled.div`
-    padding-bottom: 20px;
+    padding-bottom: 0px;
 `;
 
 const Footer = props => (

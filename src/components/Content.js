@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Portfolio from './Portfolio';
 
 const ContentContainer = styled.div`
-    min-height: 400px;
+    min-height: 380px;
     max-width: 550px;
     margin: 0 auto;
     padding-left: 10px;
