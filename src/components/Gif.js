@@ -19,6 +19,8 @@ const MiniButtonContainer = styled.a`
     color: #FFDA9D;
     display: inline-flex;
     margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
 `;
 
 const MiniButton = props => (
@@ -34,7 +36,7 @@ const Gif = props => (
             icon={<GoMarkGithub />}
             link={props.github}
         />
-        {props.projectLink && <MiniButton
+        {props.link && <MiniButton
             icon={<FaDesktop />}
             link={props.link}
         />}

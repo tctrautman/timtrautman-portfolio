@@ -12,7 +12,7 @@ const ProjectContainer = styled.div`
 
 const project = {
     github: "https://github.com/tctrautman",
-    link: "timtrautman.com",
+    link: "www.timtrautman.com",
     description: "A portfolio site, written in Gatsby.js",
     title: "Static site written in Gatsby.js",
     gifSrc: "https://i.iheart.com/v3/re/new_assets/5c49d672c0f39c3bcbab4100?ops=max(650,0),quality(80)"
