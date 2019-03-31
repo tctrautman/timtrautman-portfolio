@@ -5,12 +5,17 @@ const TextContainer = styled.div`
     text-align: left;
     align-content: center;
     line-height: 21px;
-    padding: 13px;
+    padding-top: 13px;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
     min-height: 400px;
 
     p {
         padding-left: 10px;
         padding-right: 10px;
+        margin-bottom: 0px;
     }
 
     li {

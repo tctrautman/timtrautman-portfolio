@@ -7,7 +7,11 @@ const ContentContainer = styled.div`
     min-height: 400px;
     max-width: 550px;
     margin: 0 auto;
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
 `;
 
 const Content = props => (
