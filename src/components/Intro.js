@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import MiniButton from './MiniButton';
+import { FaSun } from 'react-icons/fa';
 
 const Container = styled.div`
     font-family: 'Roboto', sans-serif;
@@ -16,14 +18,26 @@ const Container = styled.div`
         max-height: 250px;
         max-height: 250px;
         margin-top: 10px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    a {
+        display: block;
+        float: left;
     }
 `;
 
 const Intro = props => (
     <Container>
+        <MiniButton
+            icon={<FaSun />}
+            link="www.google.com"
+        />
+        <br/>
+        <br/>
         <img src="https://s3.amazonaws.com/tt-personal-site/timpicture.jpg" alt="Tim"/>
+        <br/><br/>
         <div>hey, I'm Tim</div>
+        <br/>
     </Container>
 );
 

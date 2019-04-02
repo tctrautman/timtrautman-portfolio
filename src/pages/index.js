@@ -55,6 +55,7 @@ class Home extends Component {
                     <Container>
                         <Intro />
                         <Content currentContent={this.state.content} />
+                        <br/>
                         <Footer
                             setHome={this._setHome}
                             setPortfolio={this._setPortfolio}
