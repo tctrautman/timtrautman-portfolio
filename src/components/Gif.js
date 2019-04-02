@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { GoMarkGithub } from 'react-icons/go';
 import { FaDesktop } from 'react-icons/fa';
+import MiniButton from './MiniButton';
 
 const GifContainer = styled.div`
     width: 33%;
@@ -14,20 +15,6 @@ const GifContainer = styled.div`
         margin: 0 auto;
     }
 `;
-
-const MiniButtonContainer = styled.a`
-    color: #FFDA9D;
-    display: inline-flex;
-    margin-top: 10px;
-    margin-left: 15px;
-    margin-right: 15px;
-`;
-
-const MiniButton = props => (
-    <MiniButtonContainer href={props.link}>
-        {props.icon}
-    </MiniButtonContainer>
-);
 
 const Gif = props => (
     <GifContainer>
