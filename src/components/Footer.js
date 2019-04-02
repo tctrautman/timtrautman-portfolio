@@ -6,6 +6,7 @@ import Button from './FooterButton';
 
 const FooterContainer = styled.div`
     padding-bottom: 0px;
+    color: ${props => props.theme.color};
 `;
 
 const Footer = props => (

@@ -12,12 +12,13 @@ const ContentContainer = styled.div`
     padding-top: 10px;
     padding-bottom: 0px;
     margin-bottom: 0px;
+    color: ${props => props.theme.color};
 `;
 
 const Content = props => (
     <ContentContainer>
        {props.currentContent === 'home'
-        ? <Text />
+        ? <Text mode={props.mode}/>
         : <Portfolio />}
     </ContentContainer>
 );

@@ -11,11 +11,13 @@ const TextContainer = styled.div`
     padding-bottom: 0px;
     margin-bottom: 2px;
     min-height: 350px;
+    color: ${props => props.theme.color};
 
     p {
         padding-left: 10px;
         padding-right: 10px;
         margin-bottom: 0px;
+        font-weight: 300;
     }
 
     li {
@@ -24,7 +26,7 @@ const TextContainer = styled.div`
     }
 
     a {
-        color: #9DDAFF;
+        color: ${props => props.theme.a.color};
     }
 `;
 

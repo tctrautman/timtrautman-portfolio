@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import MiniButton from './MiniButton';
-import { FaSun } from 'react-icons/fa';
+import { FaSun, FaMoon } from 'react-icons/fa';
 
 const Container = styled.div`
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
     font-size: 54px;
-    color: #FFDA9D;
+    color: ${props => props.theme.color};
     text-align: center;
     height: 100%;
     padding: 0px;
@@ -24,19 +24,31 @@ const Container = styled.div`
         display: block;
         float: left;
     }
+
+    h2 {
+        font-size: 54px;
+        font-weight: 100;
+    }
+
 `;
 
 const Intro = props => (
     <Container>
-        <MiniButton
-            icon={<FaSun />}
-            link="www.google.com"
-        />
+        {props.mode === 'dark'
+            ? <MiniButton
+                icon={<FaSun />}
+                handler={props.setMode}
+            />
+            : <MiniButton
+                icon={<FaMoon />}
+                handler={props.setMode}
+            />
+        }
         <br/>
         <br/>
         <img src="https://s3.amazonaws.com/tt-personal-site/timpicture.jpg" alt="Tim"/>
         <br/><br/>
-        <div>hey, I'm Tim</div>
+        <h2>hey, I'm Tim</h2>
         <br/>
     </Container>
 );

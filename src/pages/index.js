@@ -5,16 +5,45 @@ import Footer from '../components/Footer';
 import styled from 'styled-components';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
-const theme = {
-    fontFamily: 'Roboto',
-    background: '#707070'
-}
+const darkTheme = {
+    background: '#4A4A4A',
+    color: `#FFDA9D`,
 
-const GlobalContainer = createGlobalStyle`
+    a: {
+        color: '#9DDAFF'
+    }
+};
+
+const lightTheme = {
+    background: '#FFFAB9',
+    color: '#84B0E3',
+
+    a: {
+        color: '#7F6986'
+    }
+};
+
+const DarkGlobalContainer = createGlobalStyle`
     html {
-        background: #707070;
+        background: #4A4A4A;
         height: 100%;
         width: 100%;
+        color: #FFDA9D;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+
+    body {
+        height: 100%;
+        width: 100%;
+    }
+`;
+
+const LightGlobalContainer = createGlobalStyle`
+    html {
+        background: #FFFAB9;
+        height: 100%;
+        width: 100%;
+        color: black;
     }
 
     body {
@@ -35,7 +64,8 @@ class Home extends Component {
     constructor() {
         super();
         this.state = {
-            content: 'home'
+            content: 'home',
+            mode: 'dark'
         }
     }
 
@@ -47,14 +77,32 @@ class Home extends Component {
         this.setState({'content': 'portfolio'})
     }
 
+    _setMode = () => {
+        const nextMode = this.state.mode === 'dark' ? 'light' : 'dark';
+        this.setState({'mode': nextMode})
+    }
+
     render() {
         return (
-            <ThemeProvider theme={theme}>
+            <ThemeProvider theme={
+                this.state.mode === 'dark'
+                ? darkTheme
+                : lightTheme}
+            >
                 <React.Fragment>
-                    <GlobalContainer />
+                    {this.state.mode === 'dark'
+                        ? <DarkGlobalContainer />
+                        : <LightGlobalContainer />
+                    }
                     <Container>
-                        <Intro />
-                        <Content currentContent={this.state.content} />
+                        <Intro
+                            mode={this.state.mode}
+                            setMode={this._setMode}
+                        />
+                        <Content
+                            currentContent={this.state.content}
+                            mode={this.state.mode}
+                        />
                         <br/>
                         <Footer
                             setHome={this._setHome}

@@ -2,11 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 const MiniButtonContainer = styled.a`
-    color: #FFDA9D;
+    color: ${props => props.theme.color};
     display: inline-flex;
     margin-top: 10px;
     margin-left: 15px;
     margin-right: 15px;
+    cursor: pointer;
 `;
 
 const MiniButton = props => (
