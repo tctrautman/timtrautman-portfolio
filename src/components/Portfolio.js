@@ -8,6 +8,7 @@ const ProjectContainer = styled.div`
     margin: 0 auto;
     padding: 0px;
     border-radius: 5%;
+    margin-right: 15px;
 `;
 
 const project = {
