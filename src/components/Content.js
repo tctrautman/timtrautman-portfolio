@@ -5,7 +5,6 @@ import Portfolio from './Portfolio';
 
 const ContentContainer = styled.div`
     min-height: 380px;
-    max-width: 550px;
     margin: 0 auto;
     padding-left: 10px;
     padding-right: 10px;
@@ -19,7 +18,7 @@ const Content = props => (
     <ContentContainer>
        {props.currentContent === 'home'
         ? <Text mode={props.mode}/>
-        : <Portfolio />}
+        : <Portfolio projects={props.projects} />}
     </ContentContainer>
 );
 

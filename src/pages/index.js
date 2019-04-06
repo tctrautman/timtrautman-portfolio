@@ -4,6 +4,7 @@ import Content from '../components/Content';
 import Footer from '../components/Footer';
 import styled from 'styled-components';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import projects from '../projects';
 
 const darkTheme = {
     background: '#4A4A4A',
@@ -65,7 +66,8 @@ class Home extends Component {
         super();
         this.state = {
             content: 'home',
-            mode: 'dark'
+            mode: 'dark',
+            projects: projects
         }
     }
 
@@ -102,6 +104,7 @@ class Home extends Component {
                         <Content
                             currentContent={this.state.content}
                             mode={this.state.mode}
+                            projects={this.state.projects}
                         />
                         <br/>
                         <Footer
