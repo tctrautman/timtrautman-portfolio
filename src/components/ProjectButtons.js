@@ -14,14 +14,17 @@ const ProjectButtons = props => (
         {props.beGithub && <MiniButton
             icon={<GoMarkGithub />}
             link={props.beGithub}
+            type={props.type}
         />}
         {props.feGithub && <MiniButton
             icon={<GoMarkGithub />}
             link={props.feGithub}
+            type={props.type}
         />}
         {props.publicLink && <MiniButton
             icon={<FaDesktop />}
             link={props.publicLink}
+            type={props.type}
         />}
     </ProjectButtonsContainer>
 );

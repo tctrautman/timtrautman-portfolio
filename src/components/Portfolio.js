@@ -9,6 +9,7 @@ const ProjectContainer = styled.div`
     padding: 0px;
     border-radius: 5%;
     margin-right: 15px;
+    justify-content: center;
 `;
 
 const Portfolio = props => (

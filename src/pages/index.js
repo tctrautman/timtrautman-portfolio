@@ -12,6 +12,14 @@ const darkTheme = {
 
     a: {
         color: '#9DDAFF'
+    },
+
+    fullStack: {
+        color: '#FFDA9D',
+    },
+
+    frontEnd: {
+        color: `#FFDA9D`,
     }
 };
 
@@ -24,27 +32,13 @@ const lightTheme = {
     }
 };
 
-const DarkGlobalContainer = createGlobalStyle`
+const GlobalContainer = createGlobalStyle`
     html {
-        background: #4A4A4A;
+        background: ${props => props.theme.background};
         height: 100%;
         width: 100%;
-        color: #FFDA9D;
+        color: ${props => props.theme.color};
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-    }
-
-    body {
-        height: 100%;
-        width: 100%;
-    }
-`;
-
-const LightGlobalContainer = createGlobalStyle`
-    html {
-        background: #FFFAB9;
-        height: 100%;
-        width: 100%;
-        color: black;
     }
 
     body {
@@ -92,10 +86,7 @@ class Home extends Component {
                 : lightTheme}
             >
                 <React.Fragment>
-                    {this.state.mode === 'dark'
-                        ? <DarkGlobalContainer />
-                        : <LightGlobalContainer />
-                    }
+                    <GlobalContainer />
                     <Container>
                         <Intro
                             mode={this.state.mode}
