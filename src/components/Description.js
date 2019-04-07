@@ -3,9 +3,12 @@ import styled from 'styled-components';
 
 const DescriptionContainer = styled.div`
     text-align: left;
+    min-height: 315px;
+    margin-top: 0px;
 
     h2 {
-        font-size: 20px;
+        font-size: 25px;
+        text-align: center;
     }
 `;
 

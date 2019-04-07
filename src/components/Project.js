@@ -5,6 +5,7 @@ import ProjectTab from './ProjectTab';
 import ProjectButtons from './ProjectButtons';
 import { FaListAlt } from 'react-icons/fa';
 import MiniButton from './MiniButton';
+import Description from './Description';
 
 let getColorType = props => {
     const type = props.type;
@@ -29,8 +30,11 @@ const ProjectContainer = styled.div`
         margin-top: 13px;
         color: ${props => getColorType(props)};
     }
-
-    margin: 20px;
+    min-height: 305px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
 `;
 
 const FlipContainer = styled.div`
@@ -44,7 +48,16 @@ const FlipContainer = styled.div`
 const Project = props => {
     let proj = props.project;
     return (
-        <ProjectContainer type={proj.type}>
+        <ProjectContainer
+            type={proj.type}
+            ind={props.ind}
+        >
+        {proj.flipped
+        ? <Description
+            title={proj.title}
+            description={proj.description}
+          />
+        : <>
             <h2>{proj.title}</h2>
             <Gif
                 gifSrc={proj.picSrc}
@@ -62,8 +75,11 @@ const Project = props => {
                 <MiniButton 
                     icon={<FaListAlt />}
                     type={proj.type}
+                    handler={() => props.setFlipped(proj.title)}
                 />
             </FlipContainer>
+        </>
+        }
         </ProjectContainer>
 )};
 

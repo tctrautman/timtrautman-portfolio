@@ -38,7 +38,8 @@ const GlobalContainer = createGlobalStyle`
         height: 100%;
         width: 100%;
         color: ${props => props.theme.color};
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        box-sizing: border-box;
     }
 
     body {
@@ -65,17 +66,31 @@ class Home extends Component {
         }
     }
 
-    _setHome = () => {
+    _setHome = (e) => {
         this.setState({'content': 'home'});
     }
 
-    _setPortfolio = () => {
+    _setPortfolio = (e) => {
         this.setState({'content': 'portfolio'})
     }
 
     _setMode = () => {
         const nextMode = this.state.mode === 'dark' ? 'light' : 'dark';
         this.setState({'mode': nextMode})
+    }
+
+    _setFlipped = (title) => {
+        let projects = this.state.projects.slice();
+        let flippedIndex;
+
+        projects.forEach((proj, ind) => {
+            if (proj.title === title) {
+                flippedIndex = ind;
+            }
+        });
+
+        projects[flippedIndex].flipped = !projects[flippedIndex].flipped;
+        this.setState({'projects': projects});
     }
 
     render() {
@@ -96,6 +111,7 @@ class Home extends Component {
                             currentContent={this.state.content}
                             mode={this.state.mode}
                             projects={this.state.projects}
+                            setFlipped={this._setFlipped}
                         />
                         <br/>
                         <Footer

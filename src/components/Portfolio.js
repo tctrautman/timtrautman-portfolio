@@ -3,23 +3,34 @@ import styled from 'styled-components';
 import Project from './Project';
 
 const ProjectContainer = styled.div`
-    border: 2px solid;
     min-height: 380px;
-    margin: 0 auto;
-    padding: 0px;
+    padding: 2px;
     border-radius: 5%;
     margin-right: 15px;
-    justify-content: center;
+`;
+
+const InnerProjectContainer = styled.div`
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    justify-items: center;
+    grid-gap: 2fr;
+    display: grid;
+    column-gap: 40px;
+    min-width: 340px;
+    width: 100%;
 `;
 
 const Portfolio = props => (
     <ProjectContainer>
-        {props.projects.map(project => (
-            <Project
-                key={project.title}
-                project={project}
-            />
-        ))}
+        <InnerProjectContainer>
+            {props.projects.map((project, ind) => (
+                <Project
+                    key={project.title}
+                    project={project}
+                    setFlipped={props.setFlipped}
+                    ind={ind}
+                />
+            ))}
+        </InnerProjectContainer>
     </ProjectContainer>
 );
 

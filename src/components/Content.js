@@ -18,7 +18,10 @@ const Content = props => (
     <ContentContainer>
        {props.currentContent === 'home'
         ? <Text mode={props.mode}/>
-        : <Portfolio projects={props.projects} />}
+        : <Portfolio
+            projects={props.projects}
+            setFlipped={props.setFlipped}
+        />}
     </ContentContainer>
 );
 

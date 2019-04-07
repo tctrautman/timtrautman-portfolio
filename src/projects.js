@@ -7,7 +7,8 @@ const projects = [
         beGithub: null,
         publicLink: "www.timtrautman.com",
         picSrc: "https://i.iheart.com/v3/re/new_assets/5c49d672c0f39c3bcbab4100?ops=max(650,0),quality(80)",
-        teamEffort: false
+        teamEffort: false,
+        flippsed: false
     },
     {
         title: "Buy My Mousse - an ecommerce app",
@@ -17,7 +18,8 @@ const projects = [
         beGithub: "https://github.com/tctrautman/buymymousse-backend",
         publicLink: null,
         picSrc: "https://i.iheart.com/v3/re/new_assets/5c49d672c0f39c3bcbab4100?ops=max(650,0),quality(80)",
-        teamEffort: false
+        teamEffort: false,
+        flipped: false
     },
     {
         title: "Curve fitting - a ClojureScript app",
@@ -27,7 +29,8 @@ const projects = [
         beGithub: null,
         publicLink: null,
         picSrc: "https://i.iheart.com/v3/re/new_assets/5c49d672c0f39c3bcbab4100?ops=max(650,0),quality(80)",
-        teamEffort: true
+        teamEffort: true,
+        flipped: false
     }
 ];
 
