@@ -14,7 +14,6 @@ const IconContainer = styled.div`
     margin-bottom: 13px;
     max-width: 70px;
     display: inline-block;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-size: 13px;
     color: ${props => props.theme.color};
     
