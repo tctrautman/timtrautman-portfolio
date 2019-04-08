@@ -14,7 +14,7 @@ const projects = [
         title: "Portfolio site written in Gatsby.js",
         description: "A portfolio site, written in Gatsby.js",
         type: 'front-end',
-        feGithub: "https://github.com/tctrautman",
+        feGithub: "https://github.com/tctrautman/timtrautman-portfolio",
         beGithub: null,
         publicLink: "www.timtrautman.com",
         picSrc: "https://res.cloudinary.com/dna5twsdm/image/upload/v1554744362/Screen_Shot_2019-04-07_at_9.36.30_PM.png",
