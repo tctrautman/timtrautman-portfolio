@@ -6,11 +6,16 @@ const GifContainer = styled.div`
     float: left;
     margin: 0 auto;
     align-items: center;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
 
     img {
+        display: inline-block;
         max-width: 90%;
         height: auto;
-        margin-bottom: 5px;
+        margin-bottom: 70px;
+        vertical-align: middle;
     }
 `;
 

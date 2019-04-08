@@ -21,20 +21,34 @@ let getColorType = props => {
 
 const ProjectContainer = styled.div`
     display: inline-block;
+    position: relative;
     width: 300px;
+    height: auto;
     border: 1px solid;
     border-radius: 16px;
     border-color: ${props => getColorType(props)};
 
     h2 {
         margin-top: 13px;
+        margin-left: 10px;
+        margin-right: 10px;
         color: ${props => getColorType(props)};
     }
+
     min-height: 305px;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 30px;
     margin-right: 30px;
+    vertical-align: baseline;
+
+    .projectFooter {
+        display: inline-block;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
 `;
 
 const FlipContainer = styled.div`
@@ -62,15 +76,17 @@ const Project = props => {
             <Gif
                 gifSrc={proj.picSrc}
             />
-            <ProjectTab
-                type={proj.type}
-            />
-            <ProjectButtons
-                beGithub={proj.beGithub}
-                feGithub={proj.feGithub}
-                publicLink={proj.publicLink}
-                type={proj.type}
-            />
+            <div className="projectFooter">
+                <ProjectTab
+                    type={proj.type}
+                    />
+                <ProjectButtons
+                    beGithub={proj.beGithub}
+                    feGithub={proj.feGithub}
+                    publicLink={proj.publicLink}
+                    type={proj.type}
+                    />
+            </div>
         </>
         }
         </ProjectContainer>
