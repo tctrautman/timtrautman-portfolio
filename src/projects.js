@@ -6,7 +6,7 @@ const projects = [
         feGithub: "https://github.com/tctrautman/buymymousse-frontend",
         beGithub: "https://github.com/tctrautman/buymymousse-backend",
         publicLink: null,
-        picSrc: "https://s3.amazonaws.com/tt-personal-site/Screen+Shot+2019-04-07+at+9.32.15+PM.png",
+        picSrc: "https://res.cloudinary.com/dna5twsdm/image/upload/v1554744366/Screen_Shot_2019-04-07_at_9.32.15_PM.png",
         teamEffort: false,
         flipped: false
     },
@@ -17,7 +17,7 @@ const projects = [
         feGithub: "https://github.com/tctrautman",
         beGithub: null,
         publicLink: "www.timtrautman.com",
-        picSrc: "https://s3.amazonaws.com/tt-personal-site/Screen+Shot+2019-04-07+at+9.36.30+PM.png",
+        picSrc: "https://res.cloudinary.com/dna5twsdm/image/upload/v1554744362/Screen_Shot_2019-04-07_at_9.36.30_PM.png",
         teamEffort: false,
         flippsed: false
     },
@@ -28,7 +28,7 @@ const projects = [
         feGithub: null,
         beGithub: null,
         publicLink: "http://calendarreport.com",
-        picSrc: "https://s3.amazonaws.com/tt-personal-site/Screen+Shot+2019-04-07+at+6.40.48+PM.png",
+        picSrc: "https://res.cloudinary.com/dna5twsdm/image/upload/v1554744372/Screen_Shot_2019-04-07_at_6.40.48_PM.png",
         teamEffort: true,
         flipped: false
     },
@@ -39,7 +39,7 @@ const projects = [
         feGithub: "https://github.com/probcomp/curve-fitting",
         beGithub: null,
         publicLink: null,
-        picSrc: "https://s3.amazonaws.com/tt-personal-site/Untitled+drawing.png",
+        picSrc: "https://res.cloudinary.com/dna5twsdm/image/upload/v1554744361/Screen_Shot_2019-04-08_at_10.24.26_AM.png",
         teamEffort: true,
         flipped: false
     },
@@ -50,7 +50,7 @@ const projects = [
         feGithub: null,
         beGithub: null,
         publicLink: "https://pawpartners.io",
-        picSrc: "https://s3.amazonaws.com/tt-personal-site/Screen+Shot+2019-04-07+at+6.41.07+PM.png",
+        picSrc: "https://res.cloudinary.com/dna5twsdm/image/upload/v1554744380/Screen_Shot_2019-04-07_at_6.41.07_PM.png",
         teamEffort: true,
         flipped: false
     }
