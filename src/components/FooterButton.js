@@ -1,6 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
+let invertColors = (props, cssProp) => {
+    const title = props.title;
+    const content = props.content;
+    console.log(props)
+
+    if ((title === "Home" && content === "home")
+        || (title === "Portfolio" && content === "portfolio")) {
+            return cssProp === "background" ? props.theme.color : props.theme.background;
+        } else {
+            return cssProp === "background" ? props.theme.background : props.theme.color;
+    }
+}
+
 const IconContainer = styled.div`
     padding-left: 10px;
     padding-right: 10px;
@@ -15,7 +28,7 @@ const IconContainer = styled.div`
     max-width: 70px;
     display: inline-block;
     font-size: 13px;
-    color: ${props => props.theme.color};
+    background: ${props => invertColors(props, "background")};
     
     div {
         padding-top: 7px;
@@ -27,7 +40,7 @@ const IconContainer = styled.div`
     }
 
     a, a:link, a:visited, a:active {
-        color: ${props => props.theme.color};
+        color: ${props => invertColors(props, "color")};
         text-decoration: none;
         cursor: pointer;
     }
@@ -35,7 +48,7 @@ const IconContainer = styled.div`
 
 const Button = props => {
     return (
-        <IconContainer>
+        <IconContainer title={props.title} content={props.content}>
             <a onClick={props.handler} href={props.path}>
                 <div>
                     {props.icon}

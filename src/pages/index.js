@@ -117,6 +117,7 @@ class Home extends Component {
                         <Footer
                             setHome={this._setHome}
                             setPortfolio={this._setPortfolio}
+                            content={this.state.content}
                         />
                     </Container>
                 </React.Fragment>
