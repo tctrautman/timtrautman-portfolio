@@ -71,13 +71,6 @@ const Project = props => {
                 publicLink={proj.publicLink}
                 type={proj.type}
             />
-            <FlipContainer>
-                <MiniButton 
-                    icon={<FaListAlt />}
-                    type={proj.type}
-                    handler={() => props.setFlipped(proj.title)}
-                />
-            </FlipContainer>
         </>
         }
         </ProjectContainer>
