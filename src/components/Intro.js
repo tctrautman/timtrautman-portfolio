@@ -34,17 +34,6 @@ const Container = styled.div`
 
 const Intro = props => (
     <Container>
-        {props.mode === 'dark'
-            ? <MiniButton
-                icon={<FaSun />}
-                handler={props.setMode}
-            />
-            : <MiniButton
-                icon={<FaMoon />}
-                handler={props.setMode}
-            />
-        }
-        <br/>
         <br/>
         <img src="https://s3.amazonaws.com/tt-personal-site/timpicture.jpg" alt="Tim"/>
         <br/><br/>
