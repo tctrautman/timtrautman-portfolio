@@ -4,7 +4,6 @@ import styled from 'styled-components';
 let invertColors = (props, cssProp) => {
     const title = props.title;
     const content = props.content;
-    console.log(props)
 
     if ((title === "Home" && content === "home")
         || (title === "Portfolio" && content === "portfolio")) {
