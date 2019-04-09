@@ -9,6 +9,7 @@ const GifContainer = styled.div`
     height: 100%;
     display: inline-block;
     vertical-align: middle;
+    height: 220px;
 
     img {
         display: inline-block;

@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import Gif from './Gif';
 import ProjectTab from './ProjectTab';
 import ProjectButtons from './ProjectButtons';
-import { FaListAlt } from 'react-icons/fa';
-import MiniButton from './MiniButton';
 import Description from './Description';
 
 let getColorType = props => {
@@ -51,13 +49,13 @@ const ProjectContainer = styled.div`
     }
 `;
 
-const FlipContainer = styled.div`
+/*const FlipContainer = styled.div`
     a {
         margin-top: 14px;
         float: right;
         margin-right: 20px;
     }
-`;
+`;*/
 
 const Project = props => {
     let proj = props.project;

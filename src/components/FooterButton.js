@@ -45,7 +45,7 @@ const IconContainer = styled.div`
     }
 `;
 
-const Button = props => {
+const FooterContentButton = props => {
     return (
         <IconContainer title={props.title} content={props.content}>
             <a onClick={props.handler} href={props.path}>
@@ -58,4 +58,4 @@ const Button = props => {
     );
 };
 
-export default Button;
+export default FooterContentButton;

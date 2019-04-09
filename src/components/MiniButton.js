@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import getColorType from './Project';
 
 const MiniButtonContainer = styled.a`
     color: ${props => props.theme.color};

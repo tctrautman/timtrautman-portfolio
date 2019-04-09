@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import MiniButton from './MiniButton';
-import { FaSun, FaMoon } from 'react-icons/fa';
 
 const Container = styled.div`
     font-family: 'Roboto', sans-serif;
