@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
+import projects from '../projects';
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { Helmet } from 'react-helmet';
 import Intro from '../components/Intro';
 import Content from '../components/Content';
 import Footer from '../components/Footer';
-import styled from 'styled-components';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import projects from '../projects';
 
 const darkTheme = {
     background: '#4A4A4A',
@@ -101,6 +101,10 @@ class Home extends Component {
                 : lightTheme}
             >
                 <React.Fragment>
+                    <Helmet>
+                        <meta charSet="utf-8" />
+                        <title>Tim Trautman</title>
+                    </Helmet>
                     <GlobalContainer />
                     <Container>
                         <Intro
