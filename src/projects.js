@@ -21,7 +21,7 @@ const projects = [
         publicLink: "www.timtrautman.com",
         picSrc: "https://res.cloudinary.com/dna5twsdm/image/upload/v1554744362/Screen_Shot_2019-04-07_at_9.36.30_PM.png",
         teamEffort: false,
-        flippsed: false
+        flipped: false
     },
     {
         title: "Curve fitting",

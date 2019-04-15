@@ -6,7 +6,6 @@ const GifContainer = styled.div`
     float: left;
     margin: 0 auto;
     align-items: center;
-    height: 100%;
     display: inline-block;
     vertical-align: middle;
 

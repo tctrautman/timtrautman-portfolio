@@ -1,11 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Gif from './Gif';
-import ProjectTab from './ProjectTab';
-import ProjectButtons from './ProjectButtons';
-import Description from './Description';
-import MiniButton from './MiniButton';
-import { FaClipboardList } from 'react-icons/fa';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import TileDescription from './TileDescription';
+import TilePicture from './TilePicture';
 
 let getColorType = props => {
     const type = props.type;
@@ -18,6 +15,34 @@ let getColorType = props => {
         return theme.backEnd.color;
     }
 }
+
+const AnimationStyles = styled.div`
+    position: relative;
+    .project {
+        display: block;
+        position: relative;
+        transition: all 0.4s;
+        backface-visibility: hidden;
+    }
+
+    .project-enter {
+        transform: rotateX(0.5turn);
+    }
+
+    .project-enter-active {
+        transform: rotateX(0);
+    }
+
+    .project-exit {
+        top: 0;
+        position: absolute;
+        transform: rotateX(0);
+    }
+
+    .project-exit-active {
+        transform: rotateX(0.5turn);
+    }
+`;
 
 const ProjectContainer = styled.div`
     display: inline-block;
@@ -43,84 +68,33 @@ const ProjectContainer = styled.div`
     vertical-align: baseline;
 `;
 
-const FooterContainer = styled.div`
-    display: inline-block;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-`;
-
-const FlipContainer = styled.div`
-    a {
-        margin-top: 14px;
-        float: right;
-        margin-right: 20px;
-    }
-`;
-
 const Project = props => {
     let proj = props.project;
     let flipTileCallback = function() {
         return props.setFlipped(proj.title);
     } 
     return (
-        <ProjectContainer
-            type={proj.type}
-            ind={props.ind}
-        >
-            {proj.flipped
-            ? 
-            <>
-                <h2>{proj.title}</h2>
-                <Description
-                    title={proj.title}
-                    description={proj.description}
-                    builtUsing={proj.builtUsing}
-                />
-                <FooterContainer>
-                    <ProjectTab
+        <AnimationStyles>
+            <TransitionGroup>
+                <CSSTransition
+                    unmountOnExit
+                    className="project"
+                    classNames="project"
+                    key={`${proj.title}-${proj.flipped}`}
+                    timeout={{ enter: 400, exit: 400 }}
+                >
+                    <ProjectContainer
                         type={proj.type}
-                        />
-                    <ProjectButtons
-                        beGithub={proj.beGithub}
-                        feGithub={proj.feGithub}
-                        publicLink={proj.publicLink}
-                        type={proj.type}
-                        />
-                    <FlipContainer>
-                        <MiniButton
-                            handler={flipTileCallback}
-                            icon={<FaClipboardList />}
-                        />
-                    </FlipContainer>
-                </FooterContainer>
-            </>
-            : <>
-                <h2>{proj.title}</h2>
-                <Gif
-                    gifSrc={proj.picSrc}
-                />
-                <FooterContainer>
-                    <ProjectTab
-                        type={proj.type}
-                        />
-                    <ProjectButtons
-                        beGithub={proj.beGithub}
-                        feGithub={proj.feGithub}
-                        publicLink={proj.publicLink}
-                        type={proj.type}
-                        />
-                    <FlipContainer>
-                        <MiniButton
-                            handler={flipTileCallback}
-                            icon={<FaClipboardList />}
-                        />
-                    </FlipContainer>
-                </FooterContainer>
-            </>
-            }
-        </ProjectContainer>
+                        ind={props.ind}
+                    >
+                        {proj.flipped
+                        ? <TileDescription project={proj} flipHandler={flipTileCallback} />
+                        : <TilePicture project={proj} flipHandler={flipTileCallback} />
+                        }
+                    </ProjectContainer>
+                </CSSTransition>
+            </TransitionGroup>
+        </AnimationStyles>
 )};
 
 export default Project;
