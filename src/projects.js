@@ -1,7 +1,8 @@
 const projects = [
     {
-        title: "Buy My Mousse - an ecommerce app",
-        description: "A full-stack ecommerce app, built using React, Apollo, and GraphQL, that lets users create an account, buy, and sell items.",
+        title: "Buy My Mousse",
+        description: "A full-stack ecommerce app that lets users create an account, buy, and sell items.  I built this as a way to use GraphQL for the first time.",
+        builtUsing: ["React", "Apollo", "GraphQL", "Express (Yoga)", "Next.js"],
         type: 'full-stack',
         feGithub: "https://github.com/tctrautman/buymymousse-frontend",
         beGithub: "https://github.com/tctrautman/buymymousse-backend",
@@ -11,8 +12,9 @@ const projects = [
         flipped: false
     },
     {
-        title: "Portfolio site written in Gatsby.js",
-        description: "A portfolio site, written in Gatsby.js",
+        title: "Portfolio site",
+        description: "This is the source code for the site you're on right now.  I built it from scratch using Gatsby.js.",
+        builtUsing: ["React", "Gatsby.js", "Styled Components", "Netlify"],
         type: 'front-end',
         feGithub: "https://github.com/tctrautman/timtrautman-portfolio",
         beGithub: null,
@@ -22,19 +24,9 @@ const projects = [
         flippsed: false
     },
     {
-        title: "Calendar Report - an adapted Gatsby.js template",
-        description: "",
-        type: 'front-end',
-        feGithub: null,
-        beGithub: null,
-        publicLink: "http://calendarreport.com",
-        picSrc: "https://res.cloudinary.com/dna5twsdm/image/upload/v1554744372/Screen_Shot_2019-04-07_at_6.40.48_PM.png",
-        teamEffort: true,
-        flipped: false
-    },
-    {
-        title: "Curve fitting - a ClojureScript app",
-        description: "A front-end application written in ClojureScript, used to demonstrate core concepts of probabilistic programming.",
+        title: "Curve fitting",
+        description: "This is a front-end application used to demonstrate core concepts of probabilistic programming.  I was part of the engineering team that built this at MIT.",
+        builtUsing: ["ClojureScript", "Quil", "Metaprob"],
         type: 'front-end',
         feGithub: "https://github.com/probcomp/curve-fitting",
         beGithub: null,
@@ -44,8 +36,9 @@ const projects = [
         flipped: false
     },
     {
-        title: "Paw Partners - an adapted Gatsby.js template",
-        description: "",
+        title: "Paw Partners",
+        description: "I adpated this site from a Gatsby.js template, integrated the /survey page with typeform, and used FB ads to conduct a survey of ~150 animal shelter owners.",
+        builtUsing: ["React", "Gatsby.js", "Typeform integration"],
         type: 'front-end',
         feGithub: null,
         beGithub: null,
