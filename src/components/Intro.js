@@ -27,7 +27,6 @@ const Container = styled.div`
         font-size: 54px;
         font-weight: 100;
     }
-
 `;
 
 const Intro = props => (

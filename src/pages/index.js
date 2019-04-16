@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import projects from '../projects';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { Helmet } from 'react-helmet';
+import { CSSTransition } from 'react-transition-group';
 import Intro from '../components/Intro';
 import Content from '../components/Content';
 import Footer from '../components/Footer';
@@ -54,6 +55,26 @@ const Container = styled.div`
     color: #FFDA9D;
     text-align: center;
     width: 100%;
+
+    .fade-appear {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .fade-appear.fade-appear-active {
+        opacity: 1;
+        transition: opacity 2000ms linear;
+    }
+
+    .fade-enter {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .fade-enter.fade-enter-active {
+        opacity: 1;
+        transition: opacity 2000ms linear;
+    }
 `;
 
 class Home extends Component {
@@ -106,24 +127,33 @@ class Home extends Component {
                         <title>Tim Trautman</title>
                     </Helmet>
                     <GlobalContainer />
-                    <Container>
-                        <Intro
-                            mode={this.state.mode}
-                            setMode={this._setMode}
-                        />
-                        <Content
-                            currentContent={this.state.content}
-                            mode={this.state.mode}
-                            projects={this.state.projects}
-                            setFlipped={this._setFlipped}
-                        />
-                        <br/>
-                        <Footer
-                            setHome={this._setHome}
-                            setPortfolio={this._setPortfolio}
-                            content={this.state.content}
-                        />
-                    </Container>
+                        <Container>
+                            <CSSTransition 
+                                in={true}
+                                appear={true}
+                                timeout={2000}
+                                classNames="fade"
+                            >
+                                <div>
+                                    <Intro
+                                        mode={this.state.mode}
+                                        setMode={this._setMode}
+                                    />
+                                    <Content
+                                        currentContent={this.state.content}
+                                        mode={this.state.mode}
+                                        projects={this.state.projects}
+                                        setFlipped={this._setFlipped}
+                                    />
+                                    <br/>
+                                    <Footer
+                                        setHome={this._setHome}
+                                        setPortfolio={this._setPortfolio}
+                                        content={this.state.content}
+                                    />
+                                </div>
+                            </CSSTransition>
+                        </Container>
                 </React.Fragment>
             </ThemeProvider>
         );
