@@ -61,8 +61,8 @@ const ProjectContainer = styled.div`
     }
 
     min-height: 305px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     margin-left: 30px;
     margin-right: 30px;
     vertical-align: baseline;

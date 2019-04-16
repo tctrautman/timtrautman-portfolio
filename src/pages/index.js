@@ -3,7 +3,6 @@ import projects from '../projects';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { Helmet } from 'react-helmet';
 import { CSSTransition } from 'react-transition-group';
-import Intro from '../components/Intro';
 import Content from '../components/Content';
 import Footer from '../components/Footer';
 
@@ -135,10 +134,6 @@ class Home extends Component {
                                 classNames="fade"
                             >
                                 <div>
-                                    <Intro
-                                        mode={this.state.mode}
-                                        setMode={this._setMode}
-                                    />
                                     <Content
                                         currentContent={this.state.content}
                                         mode={this.state.mode}

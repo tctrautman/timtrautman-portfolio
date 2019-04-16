@@ -1,10 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const ImageContainer = styled.div`
+    justify-items: center;
+    position: relative;
+    width: 100%;
+
+    img {
+        border-radius: 50%;
+        max-height: 250px;
+        max-height: 250px;
+        margin-top: 10px;
+        display: block;
+        margin: 0 auto;
+    }
+`;
+
 const TextContainer = styled.div`
     align-content: center;
     line-height: 21px;
-    padding-top: 5px;
+    padding-top: 20px;
     padding-left: 13px;
     padding-right: 13px;
     padding-bottom: 0px;
@@ -33,11 +48,22 @@ const TextContainer = styled.div`
     a {
         color: ${props => props.theme.a.color};
     }
+
+    h2 {
+        text-align: center;
+        font-size: 54px;
+        font-weight: 100;
+        margin-bottom: 4rem;
+    }
 `;
 
 const Text = props => (
     <TextContainer>
         <div>
+            <ImageContainer>
+                <img src="https://s3.amazonaws.com/tt-personal-site/timpicture.jpg" alt="Tim"/>
+            </ImageContainer>
+            <h2>hey, I'm Tim</h2>
             <p>I live in San Francisco, work as a software engineer, and run on espresso.</p>
             <p>I like learning about how people use the internet to solve problems in new ways. I'm particularly interested in exploring <a href="https://stratechery.com/2017/defining-aggregators/" >aggregation theory</a>, the rise of smaller <a href="https://medium.com/@dunn/digitally-native-vertical-brands-b26a26f2cf83">niche businesses</a>, and data ethics.</p>
             <p>Right now I'm a Developer Advocate at MIT's <a href="http://probcomp.csail.mit.edu/" >Probabilistic Computing Project</a>.  In past lives I:</p>
