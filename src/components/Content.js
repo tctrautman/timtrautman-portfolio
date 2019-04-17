@@ -5,7 +5,7 @@ import Text from './Text';
 import Portfolio from './Portfolio';
 
 const ContentContainer = styled.div`
-    min-height: 500px;
+    min-height: 724.8px;
     position: relative;
     top: 0;
     margin-bottom: 0px;

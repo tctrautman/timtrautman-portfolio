@@ -3,13 +3,13 @@ import styled from 'styled-components';
 import Project from './Project';
 
 const ProjectContainer = styled.div`
-    min-height: 724.81px;
+    min-height: 724.8px;
+    height: auto;
     margin-top: 0px;
     margin-bottom: 0px;
     border-radius: 5%;
     margin-left: 0px;
     margin-right: 0px;
-    position: relative;
 `;
 
 const InnerProjectContainer = styled.div`

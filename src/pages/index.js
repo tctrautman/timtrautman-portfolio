@@ -140,7 +140,6 @@ class Home extends Component {
                                         projects={this.state.projects}
                                         setFlipped={this._setFlipped}
                                     />
-                                    <br/>
                                     <Footer
                                         setHome={this._setHome}
                                         setPortfolio={this._setPortfolio}

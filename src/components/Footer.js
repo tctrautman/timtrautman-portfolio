@@ -5,7 +5,11 @@ import styled from 'styled-components';
 import FooterButton from './FooterButton';
 
 const FooterContainer = styled.div`
+    margin-top: 10px;
     padding-bottom: 0px;
+    position: relative;
+    down: 0;
+
     .divider {
         display: inline-block;
         min-width: 40px;
