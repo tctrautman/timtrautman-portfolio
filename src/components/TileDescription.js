@@ -22,9 +22,7 @@ const FlipContainer = styled.div`
     }
 `;
 
-const TileContainer = styled.div`
-    position: relative;
-`;
+const TileContainer = styled.div``;
 
 const TileDescription = props => {
     const proj = props.project;
