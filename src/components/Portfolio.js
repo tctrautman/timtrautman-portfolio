@@ -4,14 +4,11 @@ import Project from './Project';
 
 const ProjectContainer = styled.div`
     min-height: 724.81px;
-    padding-left: 2px;
-    padding-right: 2px;
-    padding-top: 0px;
-    padding-bottom: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
     border-radius: 5%;
-    margin-right: 15px;
+    margin-left: 0px;
+    margin-right: 0px;
     position: relative;
 `;
 

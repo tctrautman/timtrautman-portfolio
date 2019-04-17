@@ -6,10 +6,8 @@ import Portfolio from './Portfolio';
 
 const ContentContainer = styled.div`
     min-height: 500px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 0px;
     position: relative;
+    top: 0;
     margin-bottom: 0px;
     color: ${props => props.theme.color};
 
@@ -20,7 +18,8 @@ const ContentContainer = styled.div`
 
     .fade-enter.fade-enter-active {
         opacity: 1;
-        transition: opacity 2000ms linear 2000ms;
+        transition: opacity 2000ms linear;
+        transition-delay: 2s;
     }
 
     .fade-exit {

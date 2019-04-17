@@ -19,10 +19,10 @@ const TextContainer = styled.div`
     align-content: center;
     line-height: 21px;
     padding-top: 20px;
-    padding-left: 13px;
-    padding-right: 13px;
     padding-bottom: 0px;
     margin-bottom: 2px;
+    margin-left: 0px;
+    margin-right: 0px;
     min-height: 350px;
     color: ${props => props.theme.color};
 
@@ -33,8 +33,6 @@ const TextContainer = styled.div`
     }
 
     p {
-        padding-left: 10px;
-        padding-right: 10px;
         margin-bottom: 0px;
         font-weight: 300;
     }
