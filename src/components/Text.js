@@ -52,6 +52,18 @@ const TextContainer = styled.div`
         font-weight: 100;
         margin-bottom: 4rem;
     }
+
+    @media only screen and (max-width: 600px) {
+        p {
+            margin-left: 10px;
+            margin-right: 15px;
+        }
+
+        li {
+            margin-left: 10px;
+            margin-right: 15px;
+        }
+    }
 `;
 
 const Text = props => (

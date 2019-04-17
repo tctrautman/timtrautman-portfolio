@@ -5,11 +5,16 @@ import Project from './Project';
 const ProjectContainer = styled.div`
     min-height: 724.8px;
     height: auto;
+    position: relative;
     margin-top: 0px;
     margin-bottom: 0px;
     border-radius: 5%;
     margin-left: 0px;
     margin-right: 0px;
+
+    @media only screen and (max-width: 600px) {
+        height: 1448px;
+    }
 `;
 
 const InnerProjectContainer = styled.div`
@@ -26,6 +31,13 @@ const InnerProjectContainer = styled.div`
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+
+    @media only screen and (max-width: 600px) {
+        top: 0;
+        height: 1448px;
+        -ms-transform: none;
+        transform: none;
+    }
 `;
 
 const Portfolio = props => (

@@ -37,6 +37,11 @@ const ContentContainer = styled.div`
     .fade-exit-done {
         opacity: 0;
     }
+
+    @media only screen and (max-width: 600px) {
+        height: auto;
+        min-height: none;
+    }
 `;
 
 const Content = props => (

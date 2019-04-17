@@ -22,11 +22,15 @@ const FlipContainer = styled.div`
     }
 `;
 
+const TileContainer = styled.div`
+    position: relative;
+`;
+
 const TileDescription = props => {
     const proj = props.project;
 
     return (
-        <>
+        <TileContainer>
             <h2>{proj.title}</h2>
             <Description
                 title={proj.title}
@@ -50,7 +54,7 @@ const TileDescription = props => {
                     />
                 </FlipContainer>
             </FooterContainer>
-        </>
+        </TileContainer>
 )}
 
 export default TileDescription;

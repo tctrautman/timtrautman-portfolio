@@ -18,6 +18,7 @@ let getColorType = props => {
 
 const AnimationStyles = styled.div`
     position: relative;
+
     .project {
         display: block;
         position: relative;
@@ -45,7 +46,6 @@ const AnimationStyles = styled.div`
 `;
 
 const ProjectContainer = styled.div`
-    display: inline-block;
     position: relative;
     width: 18.75rem;
     height: 21rem;
@@ -66,6 +66,10 @@ const ProjectContainer = styled.div`
     margin-left: 30px;
     margin-right: 30px;
     vertical-align: baseline;
+
+    @media only screen and (max-width: 600px) {
+        height: auto;
+    }
 `;
 
 const Project = props => {
