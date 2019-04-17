@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 const ImageContainer = styled.div`
     justify-items: center;
-    position: relative;
     width: 100%;
 
     img {
