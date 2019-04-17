@@ -18,7 +18,7 @@ const projects = [
         type: 'front-end',
         feGithub: "https://github.com/tctrautman/timtrautman-portfolio",
         beGithub: null,
-        publicLink: "www.timtrautman.com",
+        publicLink: null,
         picSrc: "https://res.cloudinary.com/dna5twsdm/image/upload/v1554744362/Screen_Shot_2019-04-07_at_9.36.30_PM.png",
         teamEffort: false,
         flipped: false
