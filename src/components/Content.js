@@ -18,8 +18,7 @@ const ContentContainer = styled.div`
 
     .fade-enter.fade-enter-active {
         opacity: 1;
-        transition: opacity 2000ms linear;
-        transition-delay: 2s;
+        transition: opacity 200ms linear;
     }
 
     .fade-exit {
@@ -31,7 +30,7 @@ const ContentContainer = styled.div`
 
     .fade-exit.fade-exit-active {
         opacity: 0;
-        transition: opacity 2000ms linear;
+        transition: opacity 200ms linear;
     }
 
     .fade-exit-done {
@@ -49,7 +48,7 @@ const Content = props => (
         <TransitionGroup>
             <CSSTransition
                 key={props.currentContent}
-                timeout={4000}
+                timeout={200}
                 classNames="fade"
             >
                 {props.currentContent === 'home'
