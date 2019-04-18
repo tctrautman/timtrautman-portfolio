@@ -67,6 +67,8 @@ const ProjectContainer = styled.div`
     margin-left: 30px;
     margin-right: 30px;
     vertical-align: baseline;
+    align-items: center;
+    text-align: center;
 
     @media only screen and (max-width: 600px) {
         height: auto;

@@ -1,10 +1,33 @@
 import React from 'react';
 import { FaClipboardList } from 'react-icons/fa';
-import Gif from './Gif';
+import styled from 'styled-components';
 import ProjectTab from './ProjectTab';
 import ProjectButtons from './ProjectButtons';
 import MiniButton from './MiniButton';
 import { FooterContainer, FlipContainer } from './TileDescription';
+
+const PictureContainer = styled.div`
+    width: 100%;
+    float: left;
+    margin: 0 auto;
+    align-items: center;
+    display: inline-block;
+    vertical-align: middle;
+
+    img {
+        display: inline-block;
+        max-width: 90%;
+        height: auto;
+        margin-bottom: 70px;
+        vertical-align: middle;
+    }
+`;
+
+const Picture = props => (
+    <PictureContainer>
+        <img src={props.gifSrc} alt={props.description} />
+    </PictureContainer>
+);
 
 const TilePicture = props => {
     const proj = props.project;
@@ -12,7 +35,7 @@ const TilePicture = props => {
     return (
         <>
             <h2>{proj.title}</h2>
-            <Gif
+            <Picture
                 gifSrc={proj.picSrc}
             />
             <FooterContainer>

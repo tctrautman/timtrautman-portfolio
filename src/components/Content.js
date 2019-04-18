@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import Text from './Text';
 import Portfolio from './Portfolio';
+import Footer from './Footer';
 
 const ContentContainer = styled.div`
     min-height: 724.8px;
@@ -10,6 +11,7 @@ const ContentContainer = styled.div`
     top: 0;
     margin-bottom: 0px;
     color: ${props => props.theme.color};
+    align-content: center;
 
     .fade-enter {
         opacity: 0;
@@ -52,13 +54,18 @@ const Content = props => (
                 classNames="fade"
             >
                 {props.currentContent === 'home'
-                    ? <Text mode={props.mode}/>
+                    ? <Text />
                     : <Portfolio
                         projects={props.projects}
                         setFlipped={props.setFlipped}
                     />}
             </CSSTransition>
         </TransitionGroup>
+        <Footer
+            setHome={props.setHome}
+            setPortfolio={props.setPortfolio}
+            content={props.currentContent}
+        />
     </ContentContainer>
 );
 

@@ -8,7 +8,7 @@ const FooterContainer = styled.div`
     margin-top: 10px;
     padding-bottom: 0px;
     position: relative;
-    border: 0;
+    text-align: center;
 
     .divider {
         display: inline-block;
