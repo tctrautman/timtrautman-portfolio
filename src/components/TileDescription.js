@@ -22,37 +22,32 @@ const FlipContainer = styled.div`
     }
 `;
 
-const TileContainer = styled.div``;
+const ButtonContainer = styled.div`
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 3px;
+    margin-bottom: 13px;
+`;
 
 const TileDescription = props => {
     const proj = props.project;
 
     return (
-        <TileContainer>
+        <>
             <h2>{proj.title}</h2>
             <Description
                 title={proj.title}
                 description={proj.description}
                 builtUsing={proj.builtUsing}
             />
-            <FooterContainer>
-                <ProjectTab
-                    type={proj.type}
-                    />
-                <ProjectButtons
-                    beGithub={proj.beGithub}
-                    feGithub={proj.feGithub}
-                    publicLink={proj.publicLink}
-                    type={proj.type}
-                    />
-                <FlipContainer>
-                    <MiniButton
-                        handler={props.flipHandler}
-                        icon={<FaClipboardList />}
-                    />
-                </FlipContainer>
-            </FooterContainer>
-        </TileContainer>
+            <ButtonContainer>
+                <MiniButton
+                    handler={props.flipHandler}
+                    icon={<FaClipboardList />}
+                />
+            </ButtonContainer>
+        </>
 )}
 
 export default TileDescription;
