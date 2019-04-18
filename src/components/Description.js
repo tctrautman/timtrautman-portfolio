@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 const DescriptionContainer = styled.div`
     text-align: left;
-    min-height: 315px;
     margin-top: 0px;
     padding-left: 10px;
     padding-right: 10px;
