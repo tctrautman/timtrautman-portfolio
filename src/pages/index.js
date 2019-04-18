@@ -4,12 +4,11 @@ import { ThemeProvider } from 'styled-components';
 import { CSSTransition } from 'react-transition-group';
 import Content from '../components/Content';
 import Header from '../components/Header';
-import { darkTheme, lightTheme, GlobalContainer } from '../utilities/styles';
+import { theme, GlobalContainer } from '../utilities/styles';
 
 class Home extends Component {
     state = {
         content: 'home',
-        mode: 'dark',
         projects: projects
     }
 
@@ -42,11 +41,7 @@ class Home extends Component {
 
     render() {
         return (
-            <ThemeProvider theme={
-                this.state.mode === 'dark'
-                ? darkTheme
-                : lightTheme}
-            >
+            <ThemeProvider theme={theme}>
                 <React.Fragment>
                     <Header />
                     <GlobalContainer />    

@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-const darkTheme = {
+const theme = {
     background: '#4A4A4A',
     color: `#FFDA9D`,
 
@@ -14,15 +14,6 @@ const darkTheme = {
 
     frontEnd: {
         color: `#FFDA9D`,
-    }
-};
-
-const lightTheme = {
-    background: '#FFFAB9',
-    color: '#84B0E3',
-
-    a: {
-        color: '#7F6986'
     }
 };
 
@@ -68,4 +59,4 @@ const GlobalContainer = createGlobalStyle`
     }
 `;
 
-export {darkTheme, lightTheme, GlobalContainer}
+export {theme, GlobalContainer}

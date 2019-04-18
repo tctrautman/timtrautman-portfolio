@@ -11,6 +11,7 @@ const ContentContainer = styled.div`
     top: 0;
     margin-bottom: 0px;
     color: ${props => props.theme.color};
+    align-content: center;
 
     .fade-enter {
         opacity: 0;
