@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FaClipboardList } from 'react-icons/fa';
-import ProjectTab from './ProjectTab';
-import ProjectButtons from './ProjectButtons';
 import Description from './Description';
 import MiniButton from './MiniButton';
 

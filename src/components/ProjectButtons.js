@@ -1,8 +1,8 @@
 import React from 'react';
 import { GoMarkGithub } from 'react-icons/go';
 import { FaDesktop } from 'react-icons/fa';
-import MiniButton from './MiniButton';
 import styled from 'styled-components';
+import MiniButton from './MiniButton';
 
 const ProjectButtonsContainer = styled.div`
     margin-top: 5px;
