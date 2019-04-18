@@ -54,7 +54,7 @@ const Content = props => (
                 classNames="fade"
             >
                 {props.currentContent === 'home'
-                    ? <Text mode={props.mode}/>
+                    ? <Text />
                     : <Portfolio
                         projects={props.projects}
                         setFlipped={props.setFlipped}
