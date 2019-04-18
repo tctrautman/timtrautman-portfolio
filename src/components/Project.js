@@ -52,6 +52,7 @@ const ProjectContainer = styled.div`
     border: 1px solid;
     border-radius: 16px;
     border-color: ${props => getColorType(props)};
+    box-shadow: 10px 10px 22px -9px rgba(0,0,0,0.75);
 
     h2 {
         margin-top: 13px;
