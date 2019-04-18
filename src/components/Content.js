@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import Text from './Text';
 import Portfolio from './Portfolio';
+import Footer from './Footer';
 
 const ContentContainer = styled.div`
     min-height: 724.8px;
@@ -59,6 +60,11 @@ const Content = props => (
                     />}
             </CSSTransition>
         </TransitionGroup>
+        <Footer
+            setHome={props.setHome}
+            setPortfolio={props.setPortfolio}
+            content={props.currentContent}
+        />
     </ContentContainer>
 );
 
