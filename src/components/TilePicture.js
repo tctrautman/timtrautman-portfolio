@@ -8,7 +8,6 @@ import { FooterContainer, FlipContainer } from './TileDescription';
 
 const PictureContainer = styled.div`
     width: 100%;
-    float: left;
     margin: 0 auto;
     align-items: center;
     display: inline-block;
