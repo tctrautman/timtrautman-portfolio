@@ -13,7 +13,7 @@ const ProjectContainer = styled.div`
     margin-right: 0px;
 
     @media only screen and (max-width: 600px) {
-        height: 1448px;
+        height: ${props => `${props.projects.length * 362}px`};
     }
 `;
 
@@ -34,15 +34,15 @@ const InnerProjectContainer = styled.div`
 
     @media only screen and (max-width: 600px) {
         top: 0;
-        height: 1448px;
+        height: ${props => `${props.projects.length * 362}px`};
         -ms-transform: none;
         transform: none;
     }
 `;
 
 const Portfolio = props => (
-    <ProjectContainer>
-        <InnerProjectContainer>
+    <ProjectContainer projects={props.projects}>
+        <InnerProjectContainer projects={props.projects}>
             {props.projects.map((project, ind) => (
                 <Project
                     key={project.title}
