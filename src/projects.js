@@ -12,14 +12,14 @@ const projects = [
         flipped: false
     },
     {
-        title: "Portfolio site",
-        description: "This is the source code for the site you're on right now.  I built it from scratch using Gatsby.js.",
-        builtUsing: ["React", "Gatsby.js", "Styled Components", "Netlify"],
+        title: "Event Planner",
+        description: "This project was a fun way to get familiar with CSS grid and think about packing algorithms.",
+        builtUsing: ["React", "Gatsby.js", "Styled Components", "CSS grid", "Netlify"],
         type: 'front-end',
-        feGithub: "https://github.com/tctrautman/timtrautman-portfolio",
+        feGithub: "https://github.com/tctrautman/event-planner",
         beGithub: null,
-        publicLink: null,
-        picSrc: "https://res.cloudinary.com/dna5twsdm/image/upload/v1554744362/Screen_Shot_2019-04-07_at_9.36.30_PM.png",
+        publicLink: "https://romantic-shannon-fd95da.netlify.com/",
+        picSrc: "https://res.cloudinary.com/dna5twsdm/image/upload/v1556242845/Screen_Shot_2019-04-25_at_6.39.28_PM.png",
         teamEffort: false,
         flipped: false
     },
@@ -36,6 +36,18 @@ const projects = [
         flipped: false
     },
     {
+        title: "Portfolio site",
+        description: "This is the source code for the site you're on right now.  I built it from scratch using Gatsby.js.",
+        builtUsing: ["React", "Gatsby.js", "Styled Components", "Netlify"],
+        type: 'front-end',
+        feGithub: "https://github.com/tctrautman/timtrautman-portfolio",
+        beGithub: null,
+        publicLink: null,
+        picSrc: "https://res.cloudinary.com/dna5twsdm/image/upload/v1554744362/Screen_Shot_2019-04-07_at_9.36.30_PM.png",
+        teamEffort: false,
+        flipped: false
+    },
+    {
         title: "Paw Partners",
         description: "I adpated this site from a Gatsby.js template, integrated the /survey page with typeform, and used FB ads to conduct a survey of ~150 animal shelter owners.",
         builtUsing: ["React", "Gatsby.js", "Typeform integration"],
@@ -44,7 +56,7 @@ const projects = [
         beGithub: null,
         publicLink: "https://pawpartners.io",
         picSrc: "https://res.cloudinary.com/dna5twsdm/image/upload/v1554744380/Screen_Shot_2019-04-07_at_6.41.07_PM.png",
-        teamEffort: true,
+        teamEffort: false,
         flipped: false
     }
 ];
