@@ -64,48 +64,6 @@ const TextContainer = styled.div`
             margin-right: 15px;
         }
     }
-
-    #parent {
-        height: 60px;
-        white-space: nowrap;
-        overflow: hidden; 
-        font-size: 54px;
-        color: #FFDA9D;
-        position: relative;
-        vertical-align: middle;
-        padding-top: 30px;
-    }
-
-    #border {
-        border-bottom: solid 3px rgba(0,255,0,.75);
-        position: absolute;
-        right: -7px;
-        width: 20px;
-        padding-top: 20px;
-    }
-
-    /* Animation */
-    #parent {
-        animation: animated-text 2s steps(30,end) 1s 1 normal both
-    }
-
-    #border {
-        animation: animated-cursor 600ms steps(30,end) infinite;
-    }
-
-    /* text animation */
-
-    @keyframes animated-text{
-        from{width: 0;}
-        to{width: 290px;}
-    }
-
-    /* cursor animations */
-
-    @keyframes animated-cursor{
-        from{border-bottom-color: #FFDA9D;}
-        to{border-bottom-color: transparent;}
-    }
 `;
 
 const Text = props => (
@@ -114,9 +72,7 @@ const Text = props => (
             <ImageContainer>
                 <img src="https://s3.amazonaws.com/tt-personal-site/timpicture.jpg" alt="Tim"/>
             </ImageContainer>
-            <div id="parent">hey, I'm Tim
-                <div id="border"></div>
-            </div>
+            <h2>hey, I'm Tim</h2>
             <p>I live in San Francisco, work as a software engineer, and run on espresso.</p>
             <p>I like learning about how people use the internet to solve problems in new ways. I'm particularly interested in exploring <a href="https://stratechery.com/2017/defining-aggregators/" >aggregation theory</a>, the rise of smaller <a href="https://medium.com/@dunn/digitally-native-vertical-brands-b26a26f2cf83">niche businesses</a>, and data ethics.</p>
             <p>Right now I'm a Developer Advocate at MIT's <a href="http://probcomp.csail.mit.edu/" >Probabilistic Computing Project</a>.  In past lives I:</p>
