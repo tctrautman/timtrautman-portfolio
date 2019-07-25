@@ -73,13 +73,13 @@ const Text = props => (
                 <img src="https://s3.amazonaws.com/tt-personal-site/timpicture.jpg" alt="Tim"/>
             </ImageContainer>
             <h2>hey, I'm Tim</h2>
-            <p>I live in San Francisco, work as a software engineer, and run on espresso.</p>
-            <p>I like learning about how people use the internet to solve problems in new ways. I'm particularly interested in exploring <a href="https://stratechery.com/2017/defining-aggregators/" >aggregation theory</a>, the rise of smaller <a href="https://medium.com/@dunn/digitally-native-vertical-brands-b26a26f2cf83">niche businesses</a>, and data ethics.</p>
-            <p>Right now I'm a Developer Advocate at MIT's <a href="http://probcomp.csail.mit.edu/" >Probabilistic Computing Project</a>.  In past lives I:</p>
+            <p>I live in San Francisco, work as a software engineer, and run on espresso.  I like exploring new ideas, solving problems, and being friends with cool dogs.</p>
+            <p>Right now I'm a Software Engineer at <a href="https://www.getcanix.com/">Canix</a>.  In past lives I:</p>
             <ul>
+                <li>Built prototypes at the <a href="http://probcomp.csail.mit.edu/">MIT Probabilistic Computing Lab</a>.</li>
                 <li>Targeted advertising with third party marketing data at <a href="https://www.uber.com/">Uber</a>.</li>
                 <li>Helped get <a href="https://www.civisanalytics.com/" >Civis Analytics</a>' engineering and product teams off the ground during the company's first three years.</li>
-                <li>PM'd the analytics tech team on Obama's <a href="https://www.technologyreview.com/s/509026/how-obamas-team-used-big-data-to-rally-voters/">2012 campaign</a>.</li>
+                <li>PM'd the analytics tech team on Obama's <a href="https://www.technologyreview.com/s/509026/how-obamas-team-used-big-data-to-rally-voters/">2012 campaign</a>, and did data in the 2010 and 2008 cycles.</li>
             </ul>
             <p>You should get in touch if you think we'd have something to talk about.</p>
         </div>
