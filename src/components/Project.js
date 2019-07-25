@@ -22,7 +22,7 @@ const AnimationStyles = styled.div`
     .project {
         display: block;
         position: relative;
-        transition: all 0.4s;
+        transition: all 0.3s;
         backface-visibility: hidden;
     }
 
@@ -88,7 +88,7 @@ const Project = props => {
                     className="project"
                     classNames="project"
                     key={`${proj.title}-${proj.flipped}`}
-                    timeout={{ enter: 400, exit: 400 }}
+                    timeout={{ enter: 100, exit: 400 }}
                 >
                     <ProjectContainer
                         type={proj.type}
